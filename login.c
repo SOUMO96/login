@@ -99,23 +99,23 @@ void get_password(char *password)
 
     while (1)
     {
-        ch = getch(); // Read a character without echoing on the console
+        ch = getch(); 
 
-        if (ch == '\r') // Enter key
+        if (ch == '\r') 
         {
             password[i] = '\0';
             break;
         }
-        else if (ch == '\b' && i > 0) // Handle backspace
+        else if (ch == '\b' && i > 0) 
         {
             printf("\b \b");
             i--;
         }
-        else if (i < MAX_PASSWORD - 1) // Regular character
+        else if (i < MAX_PASSWORD - 1) 
         {
             printf("*");
             password[i++] = ch;
         }
     }
-    printf("\n"); // Move to the next line after password input
+    printf("\n"); 
 }
